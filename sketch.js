@@ -37,23 +37,18 @@ function setup() {
 	
 	Engine.run(engine);
 
-	star.x=starBody.position.x
-	star.y=starBody.position.y
-
-	fairy.setCollider("rectangle",500,0,70,140)
-	//fairy.debug=true;
-	
+	star.x=starBody.position.x;
+	star.y=starBody.position.y;
 }
 
 
 function draw() {
   background(bgImg);
   	
-  if(star.position.y >485){
-	 star.velocityY=0
+  if(star.y >485){
+     star.velocityY=0
   }
-
- 
+	
   keyPressed();
   drawSprites();
 
@@ -61,12 +56,12 @@ function draw() {
 
 function keyPressed() {
 	if(keyDown("right")){
-	   fairy.x= fairy.x+3
+	   fairy.x= fairy.x+3;
 	}
 	if(keyDown("left")){
 		fairy.x= fairy.x-3;
 	 }
 	 if(keyDown("down")){
-		star.velocityY = +3
+		star.velocityY = 3;
 	 }
 }
